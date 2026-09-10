@@ -221,18 +221,26 @@ async function handleContactSubmit(event) {
             body: JSON.stringify({ name, email, message, _subject: `Portfolio Inquiry from ${name}` })
         });
 
-        if (res.ok) {
+        const data = await res.json();
+
+        if (res.ok && data.success === "true") {
             statusMsg.className = "form-status-msg success";
             statusMsg.textContent = "✓ Message sent successfully! I'll get back to you soon.";
             document.getElementById("contactForm").reset();
         } else {
-            throw new Error();
+            // Formsubmit might require activation on the first run
+            if (data.message && data.message.includes("activation")) {
+                statusMsg.className = "form-status-msg success";
+                statusMsg.textContent = "Activation required! Please check your email inbox to activate FormSubmit.";
+            } else {
+                throw new Error("FormSubmit Error");
+            }
         }
     } catch (err) {
         // Fallback: Mailto link
         window.location.href = `mailto:${targetEmail}?subject=Portfolio Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
         statusMsg.className = "form-status-msg success";
-        statusMsg.textContent = "Opening your email client...";
+        statusMsg.textContent = "Opening your email client as fallback...";
     } finally {
         submitBtn.textContent = "Send Message";
         submitBtn.disabled = false;
