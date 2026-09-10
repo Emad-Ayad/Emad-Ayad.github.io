@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emad Ayad — Mobile App Developer</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://Emad-Ayad.github.io/" />
+    <meta property="og:title" content="Emad Ayad — Mobile App Developer" />
+    <meta property="og:description" content="Specialized in iOS Applications, Clean Architecture & SwiftUI." />
+    <!-- Replace with real og-preview when available -->
+    <meta property="og:image" content="https://Emad-Ayad.github.io/assets/og-preview.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="800" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Emad Ayad — Mobile App Developer" />
+    <meta name="twitter:image" content="https://Emad-Ayad.github.io/assets/og-preview.png" />
+
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2398C1D9'><path d='M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z'/></svg>">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Decoupled Project Data -->
+    <script src="data/projects.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <!-- Mouse follow glow effect -->
+    <div id="mouse-glow"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">Emad.Ayad</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resumes</a>
+                <a href="#contact">Contact</a>
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">☀️</button>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero fade-in">
+            <div class="status-badge fade-in">
+                <span class="status-dot"></span>
+                <span>Available for New Mobile Opportunities</span>
+            </div>
+            <div class="hero-image fade-in delay-1">
+                <img src="assets/me.jpeg" alt="Emad Ayad" onerror="this.src='https://ui-avatars.com/api/?name=Emad+Ayad&size=280&background=3D5A80&color=fff'">
+            </div>
+            <h1 class="fade-in delay-2">Hi, I'm <span>Emad Ayad</span></h1>
+            <h2 class="fade-in delay-3">Mobile App Developer</h2>
+            <p class="hero-description fade-in delay-3">
+                Specialized in <strong>Native iOS (Swift, SwiftUI)</strong> &amp; <strong>Cross-Platform (Flutter, Dart)</strong> engineering. Dedicated to Clean Architecture, reactive state management, and crafting responsive, high-performance apps.
+            </p>
+            <div class="hero-actions fade-in delay-3">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#resume" class="btn secondary-btn">View Resumes</a>
+            </div>
+            
+            <div class="social-links fade-in delay-3">
+                <a href="https://github.com/Emad-Ayad" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/emad-3yad" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                <button class="copy-email-btn" onclick="copyEmail(this)" title="Copy email address">
+                    <span>emadayad228@gmail.com</span>
+                    <span class="copy-badge">Copy</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section fade-in">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text fade-in delay-1">
+                    <p>I'm a Mobile App Developer with extensive experience building production-ready applications across platforms using <strong>Flutter</strong>, native iOS (Swift, UIKit, SwiftUI), and native Android (Kotlin, Jetpack Compose).</p>
+                    <p>Skilled in responsive UI/UX, RESTful API integration, Firebase ecosystems, local persistence (Hive, SQLite, SwiftData, Core Data), Lottie animations, and scalable Clean Architecture with SOLID principles.</p>
+                    <div class="about-quick-info">
+                        <div class="info-tag">📍 Cairo &bull; Damietta, Egypt</div>
+                        <div class="info-tag">📱 +20 120 682 5915</div>
+                        <div class="info-tag">🌐 Arabic (Native) &bull; English (Intermediate)</div>
+                        <div class="info-tag">🎖️ Military Service: Completed</div>
+                    </div>
+                </div>
+                <div class="about-education fade-in delay-2">
+                    <h3>Education &amp; Honors</h3>
+                    <div class="edu-item">
+                        <h4>Professional Diploma (Native Mobile Development)</h4>
+                        <p>Information Technology Institute (ITI) <span>&bull; Oct 2025 – Aug 2026</span></p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>BSc of Information Technology</h4>
+                        <p>Zagazig University <span>&bull; Sept 2018 - July 2022</span></p>
+                        <p class="grade-pill">Grade: Very Good &bull; Distinct Graduation Project</p>
+                    </div>
+                    <div class="edu-item award-item">
+                        <h4>🏆 4th Place Award</h4>
+                        <p>Innovators Support Fund Competition <span>&bull; 2022</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section fade-in">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in delay-1">
+                    <h3>Languages & Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>Flutter, Dart</li>
+                        <li>Swift, UIKit, SwiftUI</li>
+                        <li>Kotlin, Jetpack Compose</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in delay-2">
+                    <h3>Mobile Technologies</h3>
+                    <ul class="skill-list">
+                        <li>Bloc (Cubit), Combine</li>
+                        <li>Firebase, Cloud Firestore</li>
+                        <li>Dio, RESTful APIs, Lottie</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in delay-3">
+                    <h3>Architecture & Data</h3>
+                    <ul class="skill-list">
+                        <li>Clean Architecture, MVVM, MVP</li>
+                        <li>SOLID Principles, Clean Code</li>
+                        <li>Hive, SQLite, SwiftData, Core Data</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section fade-in">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="project-filters fade-in delay-1">
+                <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+                <button class="filter-btn" onclick="setFilter('ios', this)">Native iOS</button>
+                <button class="filter-btn" onclick="setFilter('flutter', this)">Flutter</button>
+            </div>
+
+            <div id="projectsGrid" class="projects-grid">
+                <!-- Projects injected via app.js -->
+            </div>
+            <div class="toggle-projects-container fade-in delay-2">
+                <button id="btnToggleProjects" class="btn secondary-btn" style="display: none;">
+                    <span>Show All Projects</span> <span>↓</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section fade-in">
+            <h2 class="section-title">My Resumes</h2>
+            <div class="resume-cards fade-in delay-1">
+                <div class="resume-card">
+                    <div class="resume-icon">📱</div>
+                    <h3>iOS Developer Resume</h3>
+                    <p>Focuses on Swift, UIKit, SwiftUI, and native iOS development.</p>
+                    <div class="resume-actions">
+                        <a href="assets/cv/iOS_CV.pdf" target="_blank" class="btn primary-btn">View</a>
+                        <a href="assets/cv/iOS_CV.pdf" download="iOS_CV.pdf" class="btn secondary-btn">Download</a>
+                    </div>
+                </div>
+                <div class="resume-card">
+                    <div class="resume-icon" style="font-family: 'JetBrains Mono', monospace; font-weight: bold;">&lt;/&gt;</div>
+                    <h3>Flutter Developer Resume</h3>
+                    <p>Focuses on Dart, cross-platform mobile development, and Bloc.</p>
+                    <div class="resume-actions">
+                        <a href="assets/cv/Flutter_CV.pdf" target="_blank" class="btn primary-btn">View</a>
+                        <a href="assets/cv/Flutter_CV.pdf" download="Flutter_CV.pdf" class="btn secondary-btn">Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section fade-in">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle fade-in delay-1">I'm currently open for new mobile engineering opportunities. Feel free to connect via direct channels or leave a message below!</p>
+            
+            <div class="contact-container">
+                <!-- Direct Channels Column -->
+                <div class="contact-direct-channels fade-in delay-1">
+                    <h3 class="channels-title">Direct Channels</h3>
+                    <p class="channels-desc">Prefer a fast direct message, call, or connection? Reach out anytime:</p>
+                    
+                    <div class="channel-cards">
+                        <a href="https://wa.me/201206825915" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-icon">💬</div>
+                            <div class="channel-info">
+                                <span class="channel-label">WhatsApp</span>
+                                <span class="channel-value">+20 120 682 5915</span>
+                            </div>
+                            <span class="channel-arrow">↗</span>
+                        </a>
+
+                        <a href="mailto:emadayad228@gmail.com" class="channel-card">
+                            <div class="channel-icon">✉️</div>
+                            <div class="channel-info">
+                                <span class="channel-label">Direct Email</span>
+                                <span class="channel-value">emadayad228@gmail.com</span>
+                            </div>
+                            <span class="channel-arrow">↗</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/emad-3yad" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-icon">💼</div>
+                            <div class="channel-info">
+                                <span class="channel-label">LinkedIn</span>
+                                <span class="channel-value">linkedin.com/in/emad-3yad</span>
+                            </div>
+                            <span class="channel-arrow">↗</span>
+                        </a>
+
+                        <a href="https://github.com/Emad-Ayad" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-icon">🐙</div>
+                            <div class="channel-info">
+                                <span class="channel-label">GitHub</span>
+                                <span class="channel-value">github.com/Emad-Ayad</span>
+                            </div>
+                            <span class="channel-arrow">↗</span>
+                        </a>
+
+                        <div class="channel-card location-card">
+                            <div class="channel-icon">📍</div>
+                            <div class="channel-info">
+                                <span class="channel-label">Location</span>
+                                <span class="channel-value">Cairo &bull; Damietta, Egypt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message Form Column -->
+                <div class="contact-form-wrapper fade-in delay-2">
+                    <h3 class="channels-title">Send a Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required placeholder="Tell me about your project or opportunity..."></textarea>
+                        </div>
+                        <button type="submit" id="submitContact" class="btn primary-btn">Send Message</button>
+                        <div id="formStatusMsg" class="form-status-msg"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Emad Ayad. Designed & Built with Vanilla Web Tech.</p>
+    </footer>
+
+    <!-- Project Modal Deep Dive -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content-wrapper" id="modalContent">
+            <!-- Modal Content injected via app.js -->
+        </div>
+    </div>
+
+</body>
+</html>
